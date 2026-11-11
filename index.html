@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' blob: data:; manifest-src 'self'; worker-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0E7A66">
+<title>Hausstark</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <a class="brand" href="#heute" aria-label="Hausstark Startseite">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 15 16 5l12 10v12H4z" class="bx"/><path d="M10 20h12M10 17v6M22 17v6M8 18.5v3M24 18.5v3" class="bb"/></svg>
+      <span>Hausstark</span>
+    </a>
+    <a class="profile-link" href="#profil" aria-label="Profil und Daten">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+    </a>
+  </header>
+  <nav class="tabs" aria-label="Bereiche">
+    <a href="#heute" data-tab="heute"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg><span>Heute</span></a>
+    <a href="#plan" data-tab="plan"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Plan</span></a>
+    <a href="#uebungen" data-tab="uebungen"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.5" r="2"/><path d="M12 7v7M12 14l-4 7M12 14l4 7M5 10h14"/></svg><span>Übungen</span></a>
+    <a href="#essen" data-tab="essen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18a9 9 0 0 1-18 0zM8 8c0-2 2-2 2-4M13 8c0-2 2-2 2-4"/></svg><span>Essen</span></a>
+    <a href="#fortschritt" data-tab="fortschritt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V11M11 20V5M17 20v-6M2 20.5h20"/></svg><span>Fortschritt</span></a>
+  </nav>
+  <main id="view" tabindex="-1">
+    <noscript><p>Hausstark braucht JavaScript.</p></noscript>
+  </main>
+</div>
+<div id="modal" class="modal" hidden><div class="sheet" role="dialog" aria-modal="true"><div id="modalBody"></div></div></div>
+<div id="player" class="player" hidden></div>
+<div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>
